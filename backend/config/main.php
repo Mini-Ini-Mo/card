@@ -21,6 +21,9 @@ return [
         'content' => [
             'class' => 'app\modules\content\Module',
         ],
+        'myCenter' => [
+            'class' => 'app\modules\myCenter\Module',
+        ],
     ],
     
     "aliases" => [
