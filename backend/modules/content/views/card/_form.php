@@ -14,22 +14,28 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'birthday')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'birthday')->textInput(['maxlength' => true])->widget(\kartik\date\DatePicker::className(),[
+            'value'=>0,
+            'pluginOptions'=>[
+                'autoclose'=>true,
+                'format' => 'yyyy/mm/dd'
+            ]
+    ]) ?>
 
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'owner')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'owner')->hiddenInput(['maxlength' => true,'value'=>Yii::$app->user->id])->label(false) ?>
 
-    <?= $form->field($model, 'remark')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'sex')->dropDownList([ 'm' => 'M', 'w' => 'W', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'sex')->dropDownList([ 'man' => '男', 'woman' => '女', ], ['prompt' => '请选择']) ?>
 
     <?= $form->field($model, 'profession')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'created_at')->hiddenInput(['maxlength' => true,'valute'=>time()])->label(false) ?>
+
+    <?= $form->field($model, 'remark')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton($model->isNewRecord?'保存':'修改', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

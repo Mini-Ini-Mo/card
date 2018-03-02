@@ -13,7 +13,7 @@ use Yii;
  * @property int $created_at
  * @property int $owner
  * @property string $remind 是否提醒
- * @property int $remind_time 提醒时间
+ * @property string $remind_time 提醒时间
  */
 class Note extends \yii\db\ActiveRecord
 {
@@ -33,7 +33,8 @@ class Note extends \yii\db\ActiveRecord
         return [
             [['content'], 'required'],
             [['content', 'status', 'remind'], 'string'],
-            [['created_at', 'owner', 'remind_time'], 'integer'],
+            [['created_at', 'owner'], 'integer'],
+            [['remind_time'], 'string', 'max' => 50],
         ];
     }
 

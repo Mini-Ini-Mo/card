@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Card */
 
-$this->title = 'Update Card: {nameAttribute}';
-$this->params['breadcrumbs'][] = ['label' => 'Cards', 'url' => ['index']];
+$this->title = '修改';
+$this->params['breadcrumbs'][] = ['label' => '客户列表', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

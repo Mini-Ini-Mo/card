@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\search\CardSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Cards';
+$this->title = '客户列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="card-index">
@@ -25,11 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'name',
-            'birthday',
             'phone',
-            'owner',
+            'birthday',
+            //'owner',
             //'remark:ntext',
             //'sex',
             //'profession',

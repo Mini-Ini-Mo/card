@@ -34,9 +34,11 @@ class Card extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'phone'], 'required'],
-            [['birthday', 'phone', 'owner', 'created_at'], 'integer'],
+            [['owner', 'created_at'], 'integer'],
             [['remark', 'sex'], 'string'],
             [['name', 'profession'], 'string', 'max' => 150],
+            [['birthday'], 'string', 'max' => 50],
+            [['phone'], 'string', 'max' => 30],
         ];
     }
 
