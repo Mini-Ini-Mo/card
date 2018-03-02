@@ -18,6 +18,9 @@ return [
         "admin" => [
             "class" => "mdm\admin\Module",
         ],
+        'content' => [
+            'class' => 'app\modules\content\Module',
+        ],
     ],
     
     "aliases" => [
