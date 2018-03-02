@@ -44,12 +44,12 @@ class Note extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'content' => 'Content',
-            'status' => 'Status',
-            'created_at' => 'Created At',
-            'owner' => 'Owner',
-            'remind' => 'Remind',
-            'remind_time' => 'Remind Time',
+            'content' => '内容',
+            'status' => '状态',
+            'created_at' => '创建时间',
+            'owner' => '所属者',
+            'remind' => '提醒',
+            'remind_time' => '提醒时间',
         ];
     }
 }

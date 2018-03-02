@@ -47,14 +47,14 @@ class Card extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'birthday' => 'Birthday',
-            'phone' => 'Phone',
-            'owner' => 'Owner',
-            'remark' => 'Remark',
-            'sex' => 'Sex',
-            'profession' => 'Profession',
-            'created_at' => 'Created At',
+            'name' => '姓名',
+            'birthday' => '生日',
+            'phone' => '电话',
+            'owner' => '所属者',
+            'remark' => '备注',
+            'sex' => '性别',
+            'profession' => '职业',
+            'created_at' => '创建时间',
         ];
     }
 }
